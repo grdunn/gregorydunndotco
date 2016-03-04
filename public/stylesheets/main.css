@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+
+}
+
+.container {
+  max-width: 1000px;
+}
+
+h1,h2,h3,h4,h5,p,li {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  /*border-bottom: 1px solid #f1f1f1;*/
+  padding: 40px;
+}
+
+nav p {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+
+.nav-links {
+  display: inline-block;
+  float: right;
+  text-transform: uppercase;
+}
+
+.nav-links ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-links ul li {
+  display: inline;
+  padding: 15px;
+}
