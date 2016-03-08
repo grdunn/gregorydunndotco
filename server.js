@@ -3,8 +3,8 @@ var engine   = require('ejs-locals');
 
 keystone.init({
 
-  'name': 'triple-crown-beta',
-  'brand': 'Triple Crown Records',
+  'name': 'Gregory Dunn',
+  'brand': 'Gregory Dunn',
 
   'favicon': 'public/favicon.ico',
   'less': 'public',
@@ -26,14 +26,5 @@ keystone.init({
 require('./models');
 
 keystone.set('routes', require('./routes'));
-
-// keystone.set('nav', {
-// 	'News': ['News', 'NewsCategory'],
-//   'Albums': 'Album',
-// 	'Artists': 'Artist',
-// 	'Videos': ['Video', 'VideoCategory'],
-// 	'Admin': 'User',
-//   'Featured': 'Featured'
-// });
 
 keystone.start();

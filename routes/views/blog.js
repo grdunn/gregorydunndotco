@@ -1,24 +1,23 @@
 var keystone = require('keystone');
 var async = require('async');
-const Project = keystone.list('Project');
+const Post = keystone.list('Post');
 
 exports = module.exports = function (req, res){
   var view = new keystone.View(req, res);
 
   var locals =  res.locals;
-                locals.whatever = []
 
 // Get projects
   view.on('init', function(next){
-    var featured = Project.model.find().sort('-createdAt').populate('categories')
+    var featured = Post.model.find().sort('-createdAt').populate('categories')
         .exec(function (err, results){
           console.log(results);
-          locals.projects = results;
+          locals.posts = results;
           next();
         });
       })
 
 
 // Render index
-  view.render('index');
+  view.render('blog');
 };

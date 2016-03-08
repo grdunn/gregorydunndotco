@@ -1,0 +1,14 @@
+<% layout('boilerplate') -%>
+<div class="wrapper">
+  <div class="container">
+    <% posts.forEach(function(post, i){ %>
+    <div class="blog-post">
+      <div class="row">
+        <div class="col-md-5">
+          <p><%-post.createdAt%>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

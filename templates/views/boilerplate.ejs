@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Gregory Dunn</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <%-scripts%>
     <%-stylesheets%>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,18 +17,49 @@
       <nav>
         <div class="nav">
           <div class="container">
-            <p>Gregory Dunn</p>
+            <p><a href="/">Gregory Dunn<a></p>
             <div class="nav-links">
               <ul>
-                <li>Work</li>
-                <li>About</li>
-                <li>Hire Me</li>
-                <li>Blog</li>
+                <li><a href="/">Work</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/about">About / Contact</a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
+      <%- body %>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Gregory Dunn</p>
+            </div>
+            <div class="col-sm-3">
+              <div class="footer-nav">
+                <ul>
+                  <li><a href="/">Work</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="footer-nav">
+                <ul>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Github</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Code Pen</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

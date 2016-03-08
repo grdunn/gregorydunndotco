@@ -1,1 +1,35 @@
 <% layout('boilerplate') -%>
+<div class="container work">
+  <div class="row">
+      <%projects.forEach(function(project, i) {%>
+        <% if(i % 3 == 0) { %>
+          <div class="clearfix visible-md-block"></div>
+          <div class="clearfix visible-lg-block"></div>
+        <% } %>
+        <% if(i % 2 == 0) { %>
+          <div class="clearfix visible-sm-block"></div>
+        <% } %>
+        <div class="col-md-4 col-sm-6">
+          <div class="project">
+            <a href="#" class="project-link"><img src="/images/portfolio/<%-project.photo.filename%>"/></a>
+            <h2 class="meta">View Project</h2>
+            <%project.categories.forEach(function(category, i){%>
+            <span class="small"><%-category.name%></span>
+              <% if (project.categories.length > 1 && project.categories.length - 1 != i) { %>
+                <span class="small">/</span>
+              <% } %>
+            <% }) %>
+            <h1><%-project.title%></h1>
+            <p><%-project.description%></p>
+        </div>
+      </div>
+      <% }) %>
+      <div class="col-md-4 col-sm-6 last-project">
+        <div class="project">
+          <div class="hire-me">
+            <a href="/contact"><h3>Hire Me</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

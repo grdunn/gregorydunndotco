@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs-locals": "^1.0.2",
-    "keystone": "^0.3.16"
+    "keystone": "^0.3.16",
+    "nodemailer": "^2.3.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1"
