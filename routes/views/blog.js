@@ -7,15 +7,21 @@ exports = module.exports = function (req, res){
 
   var locals =  res.locals;
 
-// Get projects
-  view.on('init', function(next){
-    var featured = Post.model.find().sort('-createdAt').populate('categories')
-        .exec(function (err, results){
-          console.log(results);
-          locals.posts = results;
-          next();
-        });
-      })
+view.on('init', function(next) {
+  var blog = Post.paginate({
+			page: req.query.page || 1,
+				perPage: 6,
+				maxPages: 10,
+		})
+		.where('state', 'published')
+		.sort('-createdAt')
+		.populate('categories');
+      blog.exec(function (err, results) {
+        console.log(results);
+		  locals.posts = results;
+      next();
+	});
+});
 
 
 // Render index

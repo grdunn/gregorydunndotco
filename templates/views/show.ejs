@@ -1,0 +1,31 @@
+<% layout('boilerplate') -%>
+<div class="wrapper contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-responsive" src="/images/show/<%-project[0].show_photo.filename%>"/></br>
+      </div>
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+        <%project[0].categories.forEach(function(category, i){%>
+          <span class="blog-small"><%-category.name%></span>
+          <% if (project[0].categories.length > 1 && project[0].categories.length - 1 != i) { %>
+            <span class="blog-small">/</span>
+          <% } %>
+        <%})%>
+        <h1 class="h1class"><%-project[0].title%></h1>
+        <p><%-project[0].description%></p></br>
+          <% if (project[0].itunes){ %>
+          <a href="<%-project[0].itunes%>"><button class="btn-dark">iTunes</button></a>&nbsp;&nbsp;
+          <% } %>
+          <% if (project[0].spotify){ %>
+          <a href="<%-project[0].spotify%>"><button class="btn-dark">Spotify</button></a>
+          <% } %>
+      </div>
+    </div>
+    <div id="back">
+      <a href="/"><span class="blog-small"><i class="fa fa-angle-left"></i> BACK TO WORK</span></a>
+    </div>
+  </div>
+</div>

@@ -5,14 +5,14 @@
       <div class="col-md-6">
         <img class="img-responsive" src="/images/static/about.jpg"/>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" id="about">
         <div class="about">
           <p class="lead">Hello. I'm a musician, designer, and web-developer currently working out of Philadelphia.</p><p>I've spent the past decade writing and recording music, as well as touring with bands such as Moving Mountains, and Say Anything. I'm also a freelance designer & full-stack developer, with a particular admiration for Node.js, Angular, MongoDB, React, Express, and Keystone.js to name a few. When I'm not writing code or writing music, I'm usually cooking, or watching the Knicks lose. I love working with independent artists, in all aspects of art.</p>
         </div>
       </div>
     </div>
   </br>
-    <div class="row">
+    <div class="row" id="contact">
       <div class="col-md-6">
         <p class="lead">Let's work together.</p>
         <form action="/contact" method="post">
@@ -23,5 +23,20 @@
         </form>
       </div>
     </div>
+    <div id="back">
+      <a href="javascript:void(0)" id="backbutton"><span class="blog-small"><i class="fa fa-angle-left"></i> BACK</span></a>
+    </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function () {
+
+  var back = window.history
+  console.log(back);
+
+  $('#backbutton').on('click', function (){
+    window.history.back();
+  })
+})
+</script>

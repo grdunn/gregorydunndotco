@@ -128,6 +128,17 @@ nav p,
   line-height: 1.5;
 }
 
+.h1class {
+  letter-spacing: 1px;
+  color: #1d1d1d;
+  max-width: 300px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .project p{
   width: 300px;
   margin: auto;
@@ -135,6 +146,19 @@ nav p,
   line-height: 1.8;
   color: #4a4a4a;
   font-size: 1.3rem;
+}
+
+.blog-post {
+  margin-bottom: 100px;
+}
+
+.blog-post img {
+  margin-bottom: 20px;
+}
+
+.blog-post p {
+  margin-bottom: 20px;
+  line-height: 23px;
 }
 
 .contact {
@@ -218,6 +242,15 @@ nav p,
   color: grey;
 }
 
+.blog-small {
+  letter-spacing: 1px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  color: grey;
+}
+
 .footer {
   background-color: #373737;
   height: 300px;
@@ -260,6 +293,10 @@ nav p,
   text-align: center;
 }
 
+a .btn-dark {
+  color: black;
+}
+
 .btn-dark {
   background-color: transparent;
   letter-spacing: 1px;
@@ -273,6 +310,20 @@ nav p,
   background-color: #373737;
   color: #f1f1f1;
   transition: .3s;
+}
+
+.pagination {
+  margin: 0px;
+  width: 100%;
+  text-align: right;
+}
+
+.pagination a {
+  color: black;
+}
+
+#back {
+  margin-top: 50px;
 }
 
 /*3 Rows Smaller*/

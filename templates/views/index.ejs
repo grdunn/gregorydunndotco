@@ -11,7 +11,7 @@
         <% } %>
         <div class="col-md-4 col-sm-6">
           <div class="project">
-            <a href="#" class="project-link"><img src="/images/portfolio/<%-project.photo.filename%>"/></a>
+            <a href="/project/<%-project.slug%>" class="project-link"><img src="/images/portfolio/<%-project.photo.filename%>"/></a>
             <h2 class="meta">View Project</h2>
             <%project.categories.forEach(function(category, i){%>
             <span class="small"><%-category.name%></span>
@@ -27,7 +27,7 @@
       <div class="col-md-4 col-sm-6 last-project">
         <div class="project">
           <div class="hire-me">
-            <a href="/contact"><h3>Hire Me</h3></a>
+            <a href="/about#about"><h3>Hire Me</h3></a>
           </div>
         </div>
       </div>

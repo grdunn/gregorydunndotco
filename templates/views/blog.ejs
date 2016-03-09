@@ -1,14 +1,35 @@
 <% layout('boilerplate') -%>
-<div class="wrapper">
+<div class="wrapper contact">
   <div class="container">
-    <% posts.forEach(function(post, i){ %>
-    <div class="blog-post">
-      <div class="row">
-        <div class="col-md-5">
-          <p><%-post.createdAt%>
+    <%posts.results.forEach(function (post, i) {%>
+        <div class="blog-post">
+          <div class="row">
+            <div class="col-md-5">
+              <span class="blog-small"><%-post.format_date%></span>
+              <h1 class="h1class"><%-post.title%></h1>
+              <%post.categories.forEach(function(category, i){%>
+                <span class="blog-small"><%-category.name%></span>
+                <% if (post.categories.length > 1 && post.categories.length - 1 != i) { %>
+                  <span class="blog-small">/</span>
+                <% } %>
+              <%})%>
+              <div>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <%-post.post%>
+          </div>
         </div>
       </div>
+    <%})%>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <a href="/"><span class="blog-small"><i class="fa fa-angle-left"></i> BACK</span></a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="#"><span class="blog-small"><i class="fa fa-angle-left"></i> PREVIOUS</span></a>&nbsp;&nbsp;
+        <a href="#"><span class="blog-small">NEXT <i class="fa fa-angle-right"></i></span></a>
+      </div>
     </div>
-    <% }) %>
   </div>
 </div>

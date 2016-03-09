@@ -24,6 +24,7 @@ exports = module.exports = function(app) {
     app.get('/', routes.views.index);
     app.get('/about', routes.views.about);
     app.get('/blog', routes.views.blog);
+    app.get('/project/:id', routes.views.show);
 
     app.post('/contact', function (req, res){
       console.log(req.body.email);
