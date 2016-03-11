@@ -5,7 +5,7 @@
     <title>Gregory Dunn</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:200,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css" media="screen" title="no title" charset="utf-8">
     <%-scripts%>
@@ -17,13 +17,26 @@
       <nav>
         <div class="nav">
           <div class="container">
-            <p><a href="/">Gregory Dunn<a></p>
-            <div class="nav-links">
+            <p><a href="/">Gregory Dunn</a></p>
+            <div class="nav-links" id="desktop">
               <ul>
                 <li><a href="/">Work</a></li>
                 <li><a href="/blog">Blog</a></li>
                 <li><a href="/about">About / Contact</a></li>
               </ul>
+            </div>
+            <div class="nav-links" id="mobile">
+              <button class="btn-dark btn-clear ham"><span class="blog-small">MENU</span>&nbsp;<i class="fa fa-angle-down"></i></button>
+            </div>
+            <div class="mobile-navigation">
+              <div class="mobile-inner">
+                <ul>
+                  <li><a href="/">Work</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/about">Contact</a></li>
+                  <li><a class="ham" href="#">Back</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -34,10 +47,10 @@
       <div class="footer-content">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-xs-12" id="gregory-dunn">
               <p>Gregory Dunn</p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-xs-6">
               <div class="footer-nav">
                 <ul>
                   <li><a href="/">Work</a></li>
@@ -47,7 +60,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 col-xs-6">
               <div class="footer-nav">
                 <ul>
                   <li><a href="https://www.instagram.com/grdunn">Instagram</a></li>
@@ -61,5 +74,18 @@
         </div>
       </div>
     </div>
+    <script>
+    $(document).ready(function(){
+      $(window).on('resize', function () {
+        if (window.innerWidth > 991) {
+          $(".mobile-navigation").hide();
+        }
+      })
+      $('#show-image').addClass('show')
+      $(".ham").click(function () {
+        $(".mobile-navigation").fadeToggle(500);
+      });
+    })
+    </script>
   </body>
 </html>
