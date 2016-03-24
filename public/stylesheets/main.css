@@ -63,8 +63,12 @@ input[type="color"]:focus,
 }
 
 .wrapper {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 300px;
+}
+
+.padding {
+  padding: 0px;
 }
 
 nav {
@@ -111,7 +115,7 @@ nav p,
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #939393;
+  color: #000;
   transition: .3s;
 }
 
@@ -126,7 +130,7 @@ nav p,
 
 .project {
   text-align: center;
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
 }
 
 .project h1 {
@@ -203,11 +207,35 @@ nav p,
 }
 
 .project-link:hover {
-  opacity: .1;
+  opacity: .05;
+}
+
+.stuck {
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  top: 0;
+}
+
+.stuck-margin {
+  margin-top: 100px;
+  padding-top: 50px;
+}
+
+.stuck-margin-show {
+  margin-top: 200px;
 }
 
 .project-link:hover + .meta {
+  padding: 50px;
   display: block;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .project h2,
@@ -436,6 +464,7 @@ a .btn-dark {
     text-align: center;
     padding: 0px;
     padding-top: 40px;
+    transition: .2s;
   }
   .nav p {
     display: block;

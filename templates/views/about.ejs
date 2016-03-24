@@ -35,5 +35,17 @@ $(document).ready(function () {
   $('#backbutton').on('click', function (){
     window.history.back();
   })
-})
+    var didScroll,
+    navbarHeight = $('nav').outerHeight() - 50;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st >= navbarHeight) {
+      $('nav').addClass('stuck');
+      $('.wrapper').addClass('stuck-margin-show');
+    } else if (st < navbarHeight){
+      $('nav').removeClass('stuck');
+      $('.wrapper').removeClass('stuck-margin-show');
+    }
+  })
+});
 </script>
