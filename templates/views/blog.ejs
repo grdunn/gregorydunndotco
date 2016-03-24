@@ -27,26 +27,13 @@
         <a href="/"><span class="blog-small"><i class="fa fa-angle-left"></i> BACK</span></a>
       </div>
       <div class="col-xs-6 text-right">
-        <a href="#"><span class="blog-small"><i class="fa fa-angle-left"></i> PREVIOUS</span></a>&nbsp;&nbsp;
-        <a href="#"><span class="blog-small">NEXT <i class="fa fa-angle-right"></i></span></a>
+        <% if (posts.previous) { %>
+          <a href="?page=<%-posts.previous%>"><span class="blog-small"><i class="fa fa-angle-left"></i> PREVIOUS</span></a>&nbsp;&nbsp;
+        <% } %>
+        <% if (posts.next) { %>
+          <a href="?page=<%-posts.next%>"><span class="blog-small">NEXT <i class="fa fa-angle-right"></i></span></a>
+        <% } %>
       </div>
     </div>
   </div>
 </div>
-
-<script>
-  $(document).ready(function(){
-    var didScroll,
-    navbarHeight = $('nav').outerHeight() - 50;
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-    if (st >= navbarHeight) {
-      $('nav').addClass('stuck');
-      $('.wrapper').addClass('stuck-margin-show');
-    } else if (st < navbarHeight){
-      $('nav').removeClass('stuck');
-      $('.wrapper').removeClass('stuck-margin-show');
-    }
-  });
-  })
-</script>

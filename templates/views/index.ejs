@@ -25,20 +25,3 @@
       <% }) %>
     </div>
   </div>
-
-  <script>
-$(document).ready(function(){
-    var didScroll,
-    navbarHeight = $('nav').outerHeight() - 50;
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-    if (st >= navbarHeight) {
-      $('nav').addClass('stuck');
-      $('.wrapper').addClass('stuck-margin');
-    } else if (st < navbarHeight){
-      $('nav').removeClass('stuck');
-      $('.wrapper').removeClass('stuck-margin');
-    }
-  });
-})
-  </script>

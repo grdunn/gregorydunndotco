@@ -34,25 +34,19 @@ h1,h2,h3,h4,h5,p,li {
   margin: 0px;
 }
 
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
 textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.uneditable-input:focus {
-  border-color: none;
-  box-shadow: none;
-  outline: 0 none;
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
 }
 
 .form {
@@ -396,6 +390,7 @@ a .btn-dark {
 .mobile-inner ul {
   list-style: none;
   padding: 0px;
+  text-align: center;
 }
 
 .mobile-inner ul li {
@@ -417,6 +412,21 @@ a .btn-dark {
   transform: translate(-50%, -50%);
 }
 
+#iphone-nav {
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+  height: 45px;
+  transition: .5s;
+}
+
+.iphone-nav-show {
+  position: fixed !important;
+  top: 0px !important;
+  background-color: white;
+}
 
 
 /*3 Rows Smaller*/
@@ -434,6 +444,10 @@ a .btn-dark {
     margin-bottom: 40px;
   }
 
+  .gregorydunn {
+    display: none;
+  }
+
   #mobile {
     display: inline-block;
   }
@@ -441,6 +455,7 @@ a .btn-dark {
   #desktop {
     display: none;
   }
+
   .footer-content {
     text-align: center;
     margin-top: 35px;
@@ -464,6 +479,7 @@ a .btn-dark {
     text-align: center;
     padding: 0px;
     padding-top: 40px;
+    padding-bottom: 20px;
     transition: .2s;
   }
   .nav p {

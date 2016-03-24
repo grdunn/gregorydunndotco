@@ -17,7 +17,7 @@
       <nav>
         <div class="nav">
           <div class="container">
-            <p><a href="/">Gregory Dunn</a></p>
+              <p><a href="/">Gregory Dunn</a></p>
             <div class="nav-links" id="desktop">
               <ul>
                 <li><a href="/">Work</a></li>
@@ -41,6 +41,9 @@
           </div>
         </div>
       </nav>
+      <div id="iphone-nav">
+          <button class="btn-dark btn-clear ham"><span class="blog-small">MENU</span>&nbsp;<i class="fa fa-angle-down"></i></button>
+      </div>
       <%- body %>
     </div>
     <div class="footer">
@@ -76,6 +79,17 @@
     </div>
     <script>
     $(document).ready(function(){
+
+  // if ($(window).width() < 991) {
+      $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+          if (st > 200) {
+            $('#iphone-nav').addClass('iphone-nav-show')
+          } else if (st < 200){
+            $('#iphone-nav').removeClass('iphone-nav-show')
+          }
+        })
+      // }
 
       $(window).on('resize', function () {
         if (window.innerWidth > 991) {
